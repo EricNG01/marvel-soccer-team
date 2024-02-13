@@ -11,75 +11,42 @@ This app allow you to select your 5-aside Marvel soccer Team.
 
 In the project directory, run:
 
-### `npm start`
+    npm start
 
-# Getting Started with Create React App
+## First page
+![image](https://github.com/EricNG01/marvel-soccer-team/assets/102510835/6f325647-5756-4007-a7bc-b44fa3a09f5f)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+You can select character for any role by pressing one of the five button in the middle. It will lead you to the second page
 
-## Available Scripts
+## Second page
+![image](https://github.com/EricNG01/marvel-soccer-team/assets/102510835/0f9b5e09-7e67-495b-92ed-473250eb3fc8)
 
-In the project directory, you can run:
+A random search will be perform at first. You can then search any character you want by the searching bar at the top.
+You can also choose any character from the list by pressing their images. It will lead you to the first page.
 
-### `npm start`
+## Third page
+![image](https://github.com/EricNG01/marvel-soccer-team/assets/102510835/56890c34-98f5-4fa4-8219-b0d74bcd4a26)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+A larger image of the character, his name and description will be shown on this page.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+You can confirm your selection by pressing the confirm button, or cancel this selection by pressing the cancel button.
+Both actions will bring you back to the second page.
 
-### `npm test`
+## Result
+![image](https://github.com/EricNG01/marvel-soccer-team/assets/102510835/0b3bfe83-2efd-445d-8e6c-9d1b9a8c91b6)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Here is how the first page look like after selection
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## API
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The Marvel Comic API is used in this app.
+``https://developer.marvel.com/``
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Endpoint
+### /v1/public/characters
+Search by keywords
+### /v1/public/characters/{characterId}
+Search by character Id
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
