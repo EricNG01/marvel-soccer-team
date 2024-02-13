@@ -3,14 +3,10 @@ import md5 from "md5";
 import timestamp from "time-stamp";
 
 // public key
-const PUB_KEY = "92387a221913641bb3041cd50a94d64d"; // n10641343@qut.edu.au
-// const PUB_KEY = "ad2e7fb9c421432353fa52a53a6efa48"; // ericng502502502@gmail.com
-// const PUB_KEY = "de1ab129447465668469fa0101dfc6a8"; // ericng502@gmail.com
+const PUB_KEY = "92387a221913641bb3041cd50a94d64d";
 
 // private key;
-const PRI_KEY = "39844d0d6aa0369233feeb891e86689985c4b308"; // n10641343@qut.edu.au
-// const PRI_KEY = "d3066f889752a4093ddb3dabf8932f6ad544e16a"; // ericng502502502@gmail.com
-// const PRI_KEY = "7b0ef986454e44f9f4bbeeedb56fdb32711d5f07"; // ericng502@gmail.com
+const PRI_KEY = "39844d0d6aa0369233feeb891e86689985c4b308"; 
 
 // base URL
 const URL = "http://gateway.marvel.com";
@@ -21,20 +17,16 @@ const icon = "/standard_xlarge.jpg"
 /* 
  * API call - /v1/public/characters
  * Randomly pick 1 letter from 'a' to 'z' and search 20 characters with the letter 
- * Display the result from cache instead of getting all the stuffs from API calls directly
  * Data to retrieve and save:
  *  - character ID
  *  - character name
- *  - Description
  *  - Icon Image URL (use standard_large)
  *  
  * Store the result into a list with a format of:
  * [{ 
  *    id: character id
  *    name: character name
- *    description: character description
- *    image: character icon url 
- *    landscape_img: character image url
+ *    image: character icon url
  *  }, 
  *  {}, 
  *  {}, ...]
@@ -55,7 +47,6 @@ export const GetCharacters = async () => {
             tempCharacters.push({
               id: res.data.data.results[i].id,
               name: res.data.data.results[i].name,
-              description: res.data.data.results[i].description,
               image: res.data.data.results[i].thumbnail.path + icon,
               status: "200"
             })
@@ -68,6 +59,24 @@ export const GetCharacters = async () => {
   return tempCharacters;
 }
 
+/* 
+ * API call - /v1/public/characters
+ * search characters with keywords 
+ * 
+ * Data to retrieve and save:
+ *  - character ID
+ *  - character name
+ *  - Icon Image URL (use standard_large)
+ *  
+ * Store the result into a list with a format of:
+ * [{ 
+ *    id: character id
+ *    name: character name
+ *    image: character icon url 
+ *  }, 
+ *  {}, 
+ *  {}, ...]
+ */
 export const Search = async (name) => {
   /* Time stamp */
   const ts = timestamp();
@@ -82,7 +91,6 @@ export const Search = async (name) => {
         tempCharacter.push({
           id: res.data.data.results[i].id,
           name: res.data.data.results[i].name,
-          description: res.data.data.results[i].description.length>0?res.data.data.results[i].description: "No description",
           image: res.data.data.results[i].thumbnail.path + icon,
           status: "200"
         });
@@ -95,6 +103,26 @@ export const Search = async (name) => {
     return tempCharacter;
 }
 
+/* 
+ * API call - /v1/public/characters/{characterId}
+ * search characters with characterId 
+ * 
+ * Data to retrieve and save:
+ *  - character ID
+ *  - character name
+ *  - Description
+ *  - Icon Image URL (use standard_large)
+ *  
+ * Store the result into a list with a format of:
+ * [{ 
+ *    id: character id
+ *    name: character name
+ *    description: character description
+ *    image: character icon url 
+ *  }, 
+ *  {}, 
+ *  {}, ...]
+ */
 export const GetCharacter = async (id) => {
   /* Time stamp */
   const ts = timestamp();
@@ -117,6 +145,5 @@ export const GetCharacter = async (id) => {
     const status = e.code;
     tempCharacter.push({status: status});
   }
-  // console.log(tempCharacter)
   return tempCharacter;
 }

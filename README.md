@@ -1,3 +1,18 @@
+# Getting Started with Marvel Soccer Team
+
+This app allow you to select your 5-aside Marvel soccer Team.
+    - Goal Keeper
+    -Striker
+    -Midfielder
+    -Defender
+    -Additional player who can be allocated to any outfield spot (Striker, Midfielder or Defender)
+
+## Run the app
+
+In the project directory, run:
+
+### `npm start`
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

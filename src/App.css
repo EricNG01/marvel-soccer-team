@@ -1,6 +1,6 @@
 
 *{
-  font-family:cursive;
+  font-family:'Courier New', Courier, monospace;
   word-spacing: 1px;
 }
 ::-webkit-scrollbar {
@@ -12,17 +12,17 @@
 }
 
 header {
-  background-color:rgb(255, 129, 129);
+  background-color:rgb(253, 76, 76);
   color:rgb(255,255,255);
   text-align: center;
   justify-content: center;
   display: flex;
+  flex-direction: column;
 }
 header h1 {
-  display: flex;
   text-align:center;
 }
-h2 {
+h2, p {
   color:rgb(255,255,255);
   text-align: center;
   margin: 0;
@@ -32,17 +32,19 @@ h2 {
   display: flex;
   align-items: center;
   margin: auto;
-  height: 80vh;
+  height: 60vh;
   flex-direction: row;
   justify-content: space-evenly;
 }
 .selection-container .selection {
-  display: inline-block;
+  display: flex;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   width: 15%;
-  height: 40%;
+  height: 60%;    
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -53,12 +55,9 @@ button.selection div {
   max-width:200px;
 }
 button.selection div .name{
-  word-wrap: break-word;
-  text-overflow: ellipsis;
-  text-wrap: wrap;
-  overflow: hidden;
+  display: inline-block;
   white-space: nowrap;
-  width:100%
+  text-indent: 0;
 }
 button.selection div {
   color:#ffffff;
@@ -72,7 +71,8 @@ button.selection div {
   width:100%
 }
 button.selection div div img{
-  width:100%
+  width:85%;
+  min-width: 85%;
 }
 button.selection{
   border:none;
@@ -122,7 +122,7 @@ button.selection:active{
 }
 #overlay .search-bar-container .search {
   padding:0;
-  width:40%;
+  width:60%;
   height:100%;
   text-indent: 3%;
   border-top-left-radius: 20px;
@@ -141,7 +141,7 @@ button.selection:active{
 }
 #overlay .search-bar-container .search-button {
   padding:0;
-  width:5%;
+  width:15%;
   height:100%;
   text-align: center;
   border-top-right-radius: 20px;
@@ -248,21 +248,21 @@ button.selection:active{
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  margin-top: 5%;
 }
-#overlay-2 .icon {
-  width: 30%;
-  margin-top: 4%;
+#overlay-2 .detail-container img {
+  width: 20%;
   margin-bottom: 2.5%;
   border-radius: 50%;
 }
-#overlay-2 .name{
+#overlay-2 .detail-container .name {
   font-size:xx-large;
   color: azure;
   font-style: italic;
   text-align: center;
   width: 100%;
 }
-#overlay-2 .description{
+#overlay-2 .detail-container .description {
   display:inline;
   font-size:larger;
   color: azure;
@@ -304,4 +304,20 @@ button.selection:active{
   cursor:pointer;
   background-color: rgb(236, 180, 180);
   color: rgb(214, 80, 80);
+}
+
+
+@media only screen and (max-width: 800px) {
+  .selection-container { 
+    flex-direction: column;
+    overflow-y: scroll;
+  }
+  .selection-container .selection {
+    width: 40%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+  }
+  #overlay-2 .detail-container img {
+    width: 60%;
+  }
 }
