@@ -10,8 +10,13 @@ This app allow you to select your 5-aside Marvel soccer Team.
 ## Run the app
 
 In the project directory, run:
+    
+    npm install
+to install all the required dependencies
 
     npm start
+to start the app
+It will run at 127.0.0.1:3000 / localhost:3000
 
 ## First page
 ![image](https://github.com/EricNG01/marvel-soccer-team/assets/102510835/6f325647-5756-4007-a7bc-b44fa3a09f5f)
