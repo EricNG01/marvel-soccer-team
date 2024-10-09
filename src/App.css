@@ -183,10 +183,15 @@ button.selection:active{
   position: relative;
   align-items: center;
   flex-direction: row;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
+  --n: 8;
+  --gap: calc((100% - 200px * var(--n)) / var(--n) / 2);
+  margin: 10px var(--gap)
 }
 .characters-container .characters {
-  height: auto;
+  margin: 5px 10px;
+  min-width: 200px;
+  height: 225px;
   border:none;
   color:white;
 } 
@@ -197,7 +202,7 @@ button.selection:active{
 }
 .characters-container .characters .characters-option{
   background-color:transparent;
-  max-width:200px;
+  width:200px;
   padding: 0px;
   border: none;
   transition-duration: 0.5s;
@@ -206,6 +211,8 @@ button.selection:active{
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   /* justify-content: center; */
+  height:100%;
+  position:relative;
 }
 .characters-container .characters .characters-option:hover{
   cursor:pointer;
@@ -225,7 +232,7 @@ button.selection:active{
   text-wrap: wrap;
   overflow: hidden;
   white-space: nowrap;
-  width:100%
+  width:100%;
 }
 
 #overlay-2{
