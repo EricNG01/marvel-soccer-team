@@ -24,13 +24,13 @@ It will run at 127.0.0.1:3000 / localhost:3000
 You can select character for any role by pressing one of the five button in the middle. It will lead you to the second page
 
 ## Second page
-![image](https://github.com/EricNG01/marvel-soccer-team/assets/102510835/0f9b5e09-7e67-495b-92ed-473250eb3fc8)
+![image](https://github.com/user-attachments/assets/895ebe5e-d7e2-4487-bd08-03493c751644)
 
 A random search will be perform at first. You can then search any character you want by the searching bar at the top.
 You can also choose any character from the list by pressing their images. It will lead you to the first page.
 
 ## Third page
-![image](https://github.com/EricNG01/marvel-soccer-team/assets/102510835/56890c34-98f5-4fa4-8219-b0d74bcd4a26)
+![image](https://github.com/user-attachments/assets/43ab7f80-c65d-4ff6-a55c-f4c30cfbb0ce)
 
 A larger image of the character, his name and description will be shown on this page.
 
